@@ -2,7 +2,12 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,jsx}', './pages/**/*.{html,js}', './components/**/*.{html,js}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'dark-nav': '#202040',
+        'purple-g': '#B030B0'
+      },
+    },
   },
   plugins: [],
 };
