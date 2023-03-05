@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 
 export function Navbar() {
   const [menu, set] = useState(false);
@@ -46,6 +47,7 @@ export function Navbar() {
             </li>
           </ul>
         </nav>
+        <Outlet />
       </div>
     );
   } else {
@@ -75,6 +77,7 @@ export function Navbar() {
             </li>
           </ul>
         </nav>
+        <Outlet />
       </div>
     );
   }
