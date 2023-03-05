@@ -2,13 +2,13 @@ import Typewriter from 'typewriter-effect';
 
 export function Banner() {
   return (
-    <div className='bg-dark-nav py-6 absolute z-[-2] w-full'>
-      <div className='container w-full flex flex-col lg:flex-row items-center justify-between p-8 text-slate-300 border-2 border-gray-g mx-auto my-auto rounded-md'>
+    <div className='bg-dark-nav py-8 absolute z-[-2] w-full flex items-center justify-center'>
+      <div className='container mx-8 w-full flex flex-col lg:flex-row items-center justify-between p-5 sm:p-8 text-slate-300 border-2 border-gray-g rounded-md'>
         <div className='w-full text-center mb-11 lg:w-[48%] lg:text-start'>
-          <h2 className='text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-l from-red-500 to-purple-g animate-pulse'>
+          <h2 className='text-3xl sm:text-5xl font-bold mb-2 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-l from-red-500 to-purple-g animate-pulse'>
             Dark-Developers
           </h2>
-          <div className='flex items-center justify-center lg:justify-start text-3xl mb-10'>
+          <div className='flex items-center justify-center lg:justify-start text-xl sm:text-3xl font-semibold mb-5 sm:mb-10'>
             <p className='mr-2'>Somos</p>
             <span className='text-purple-g'>
               <Typewriter
@@ -20,7 +20,7 @@ export function Banner() {
               />
             </span>
           </div>
-          <p className='text-2xl'>
+          <p className='text-lg sm:text-2xl'>
             Dark-Developers es una empresa dedicada a impartir el conocimiento en los distintos lenguajes de programacion existentes, con el objetivo
             de que tu mismo adquieras las herramientas necesarias para desarrollar tu blog o pagina web.
           </p>
