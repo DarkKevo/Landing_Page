@@ -5,8 +5,10 @@ module.exports = {
     extend: {
       colors: {
         'dark-nav': '#202040',
+        'dark-nav-500': '#343467',
         'purple-g': '#B030B0',
-        'gray-g': '#602080'
+        'gray-g': '#602080',
+        'blue-dark': '#202060',
       },
     },
   },
