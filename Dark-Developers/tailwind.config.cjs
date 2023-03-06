@@ -8,7 +8,8 @@ module.exports = {
         'dark-nav-500': '#343467',
         'purple-g': '#B030B0',
         'gray-g': '#602080',
-        'blue-dark': '#202060',
+        'blue-dark': '#161643',
+        'code-base': '#09091d'
       },
     },
   },
