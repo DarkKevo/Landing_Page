@@ -1,6 +1,7 @@
 import { Banner } from '../components/Banner';
 import { Cards } from '../components/Cards';
 import { Oferta } from '../components/Oferta';
+import { Preguntas } from '../components/Preguntas';
 
 export function Inicio() {
   return (
@@ -8,6 +9,7 @@ export function Inicio() {
       <Banner />
       <Cards />
       <Oferta />
+      <Preguntas />
     </div>
   );
 }
