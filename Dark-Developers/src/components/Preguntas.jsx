@@ -21,11 +21,11 @@ export function Preguntas() {
     l3.classList.add('hidden');
     l4.classList.add('hidden');
     l5.classList.add('hidden');
-    f1.classList.add('rotate-0');
-    f2.classList.add('rotate-0');
-    f3.classList.add('rotate-0');
-    f4.classList.add('rotate-0');
-    f5.classList.add('rotate-0');
+    f1.classList.remove('rotate-180');
+    f2.classList.remove('rotate-180');
+    f3.classList.remove('rotate-180');
+    f4.classList.remove('rotate-180');
+    f5.classList.remove('rotate-180');
   }
 
   var history = '';
@@ -40,7 +40,6 @@ export function Preguntas() {
     let obj = document.querySelector(li);
     let obj2 = document.querySelector(row);
     obj.classList.remove('hidden');
-    obj2.classList.remove('rotate-0');
     obj2.classList.add('rotate-180');
     history = li;
   }

@@ -3,6 +3,7 @@ import { Cards } from '../components/Cards';
 import { Oferta } from '../components/Oferta';
 import { Preguntas } from '../components/Preguntas';
 import { Redes } from '../components/Redes';
+import { Contacto } from '../components/contacto';
 
 export function Inicio() {
   return (
@@ -12,6 +13,7 @@ export function Inicio() {
       <Oferta />
       <Preguntas />
       <Redes />
+      <Contacto />
     </div>
   );
 }
