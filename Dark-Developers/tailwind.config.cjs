@@ -9,7 +9,9 @@ module.exports = {
         'purple-g': '#B030B0',
         'gray-g': '#602080',
         'blue-dark': '#161643',
-        'code-base': '#09091d'
+        'code-base': '#09091d',
+        'dark-redes': '#202040',
+        'dark-p-redes': '#400040',
       },
     },
   },

@@ -47,8 +47,8 @@ export function Preguntas() {
 
   return (
     <div className='bg-dark-nav w-full py-14'>
-      <h2 className='text-4xl font-bold text-center mb-8 text-slate-200'>Preguntas Frecuentes</h2>
-      <div className='container w-[85%] mx-auto border-2 border-purple-g p-6 rounded-lg text-3xl text-slate-400  duration-300'>
+      <h2 className='text-2xl sm:text-3xl font-bold text-center mb-8 text-slate-200'>Preguntas Frecuentes</h2>
+      <div className='container w-[85%] mx-auto border-2 border-purple-g p-6 rounded-lg text-lg sm:text-2xl md:text-3xl text-slate-400  duration-300'>
         <ul>
           <li
             onClick={() => {
@@ -60,7 +60,7 @@ export function Preguntas() {
               <h2 className='mb-2 p-2'>¿Que puedo ganar en mi primer curso online?</h2>
               <FontAwesomeIcon icon={faArrowDown} className='text-purple-g duration-300' id='f1' />
             </div>
-            <p id='l1' className='text-2xl hidden p-3'>
+            <p id='l1' className='text-base sm:text-2xl hidden p-3'>
               Automaticamente al inscribirte en nuestros cursos por primera vez recibes benficios de descuentos y algunas clases gratis de otros
               cursos con el fin de que explores tus conocimientos
             </p>
@@ -75,7 +75,7 @@ export function Preguntas() {
               <h2 className='mb-2 p-2'>¿Cuales son los cursos relacionados a backend?</h2>
               <FontAwesomeIcon icon={faArrowDown} className='text-purple-g duration-300' id='f2' />
             </div>
-            <p id='l2' className='text-2xl hidden p-3'>
+            <p id='l2' className='text-lg sm:text-2xl hidden p-3'>
               En nuestra seccion de cursos podras ver los distintos cursos existentes, tambien podras ubicar en la parte inferior a la rama que
               pertenecen
             </p>
@@ -90,7 +90,7 @@ export function Preguntas() {
               <h2 className='mb-2 p-2'>¿Puedo formar parte de su equipo de trabajo?</h2>
               <FontAwesomeIcon icon={faArrowDown} className='text-purple-g duration-300' id='f3' />
             </div>
-            <p id='l3' className='text-2xl hidden p-3'>
+            <p id='l3' className='text-lg sm:text-2xl hidden p-3'>
               Por supuesto que si!, en nuestra seccion de contactos podras encontrar distintas maneras de hacernos llegar tu portafoleo de
               desarrollador
             </p>
@@ -105,7 +105,7 @@ export function Preguntas() {
               <h2 className='mb-2 p-2'>¿Podre crear mis paginas web a traves de estas cursos?</h2>
               <FontAwesomeIcon icon={faArrowDown} className='text-purple-g duration-300' id='f4' />
             </div>
-            <p id='l4' className='text-2xl hidden p-3'>
+            <p id='l4' className='text-lg sm:text-2xl hidden p-3'>
               Gracias a los cursos que tomes te garantizamos que en un plazo de meses podras estar generando tus sitios web de manera profesional
             </p>
           </li>
@@ -119,7 +119,7 @@ export function Preguntas() {
               <h2 className='mb-2 p-2'>¿Con que material cuentan los cursos de programacion?</h2>
               <FontAwesomeIcon icon={faArrowDown} className='text-purple-g duration-300' id='f5' />
             </div>
-            <p id='l5' className='text-2xl hidden p-3'>
+            <p id='l5' className='text-lg sm:text-2xl hidden p-3'>
               En nuestros cursos hay disponible una gran variedad de material, desde videos explicativos hasta documentos PDF que serviran para tu
               formacion profesional como desarrollador
             </p>
