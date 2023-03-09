@@ -3,7 +3,7 @@ import { faEnvelope, faPhone, faMapLocation } from '@fortawesome/free-solid-svg-
 
 export function Contacto() {
   return (
-    <div className='bg-dark-nav w-full py-14 flex items-center justify-center'>
+    <div id='contacto' className='bg-dark-nav w-full py-14 flex items-center justify-center'>
       <div className='w-[85%] bg-dark-nav-500 rounded-lg text-slate-200 flex flex-col sm:flex-row'>
         <div className='w-[100%] sm:w-[50%]'>
           <img src='src/assets/dark.jpg' className='w-full object-cover h-full rounded-tl-lg rounded-bl-lg' />

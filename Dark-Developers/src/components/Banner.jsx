@@ -2,8 +2,8 @@ import Typewriter from 'typewriter-effect';
 
 export function Banner() {
   return (
-    <div className='bg-dark-nav py-8 w-full flex items-center justify-center'>
-      <div className='container mx-8 w-full flex flex-col lg:flex-row items-center justify-between p-5 sm:p-8 text-slate-300 border-2 border-gray-g rounded-md'>
+    <div id='banner' className='bg-dark-nav py-8 w-full flex items-center justify-center'>
+      <div className='mt-20 container mx-8 w-full flex flex-col lg:flex-row items-center justify-between p-5 sm:p-8 text-slate-300 border-2 border-gray-g rounded-md'>
         <div className='w-full text-center mb-11 sm:mb-11 lg:w-[48%] lg:mb-0 lg:text-start'>
           <h2 className='text-3xl sm:text-5xl font-bold mb-2 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-l from-red-500 to-purple-g animate-pulse'>
             Dark-Developers

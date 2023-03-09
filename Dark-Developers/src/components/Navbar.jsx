@@ -1,8 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { dataContext } from '../context/context';
+import { Link } from 'react-scroll';
 
 export function Navbar() {
+  const { setI } = useContext(dataContext);
   const [menu, set] = useState(false);
 
   function Menu(e) {
@@ -22,12 +26,12 @@ export function Navbar() {
   if (menu === false) {
     return (
       <div>
-        <nav className=' px-6 py-3 bg-dark-nav border-b-4 border-purple-g md:flex md:items-center md:justify-between'>
+        <nav className='z-[99] w-full fixed px-6 py-3 bg-dark-nav border-b-4 border-purple-g md:flex md:items-center md:justify-between'>
           <div className='flex justify-between items-center'>
             <span className='cursor-pointer'>
               <img
                 onClick={() => {
-                  window.location.href = '/';
+                  setI(1);
                 }}
                 className='h-9 inline'
                 src='src/assets/dark.png'
@@ -37,29 +41,40 @@ export function Navbar() {
               <FontAwesomeIcon onClick={Menu} icon={faBars} />
             </span>
           </div>
-          <ul className='md:flex md:items-center text-slate-500 z-[-1] md:w-auto md:z-auto md:static absolute bg-dark-nav w-full left-0 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500'>
-            <li
-              onClick={() => {
-                window.location.href = '/';
-              }}
-              className='mx-4 py-3 px-4 my-6 md:my-0 border-b-4 border-dark-nav hover:border-purple-g duration-75 hover:text-white'
-            >
-              <a href='#'>Inicio</a>
-            </li>
-            <li
-              onClick={() => {
-                window.location.href = '/Cursos';
-              }}
-              className='mx-4 py-3 px-4 my-6 md:my-0 border-b-4 border-dark-nav hover:border-purple-g duration-75 hover:text-white'
-            >
-              <a href='#'>Cursos</a>
-            </li>
+          <ul className='md:flex md:items-center text-slate-500 z-[99] md:w-auto md:z-auto md:static absolute bg-dark-nav w-full left-0 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500'>
+            <Link activeClass='active' to='banner' spy={true} smooth={true} offset={-100} duration={500}>
+              <li className='mx-4 py-3 px-4 my-6 md:my-0 border-b-4 border-dark-nav hover:border-purple-g duration-75 hover:text-white'>
+                <a
+                  href='#'
+                  onClick={() => {
+                    setI(1);
+                  }}
+                >
+                  Inicio
+                </a>
+              </li>
+            </Link>
+
             <li className='mx-4 py-3 px-4 my-6 md:my-0 border-b-4 border-dark-nav hover:border-purple-g duration-75 hover:text-white'>
-              <a href='#'>Redes</a>
+              <a
+                href='#'
+                onClick={() => {
+                  setI(2);
+                }}
+              >
+                Cursos
+              </a>
             </li>
-            <li className='mx-4 py-3 px-4 my-6 md:my-0 border-b-4 border-dark-nav hover:border-purple-g duration-75 hover:text-white'>
-              <a href='#'>Contactos</a>
-            </li>
+            <Link activeClass='active' to='redes' spy={true} smooth={true} offset={-300} duration={500}>
+              <li className='mx-4 py-3 px-4 my-6 md:my-0 border-b-4 border-dark-nav hover:border-purple-g duration-75 hover:text-white'>
+                <a href='#'>Redes</a>
+              </li>
+            </Link>
+            <Link activeClass='active' to='contacto' spy={true} smooth={true} offset={100} duration={500}>
+              <li className='mx-4 py-3 px-4 my-6 md:my-0 border-b-4 border-dark-nav hover:border-purple-g duration-75 hover:text-white'>
+                <a href='#'>Contacto</a>
+              </li>
+            </Link>
           </ul>
         </nav>
       </div>
@@ -78,10 +93,24 @@ export function Navbar() {
           </div>
           <ul className='md:flex md:items-center text-slate-500 z-[-1] md:w-auto md:z-auto md:static absolute bg-dark-nav w-full left-0 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500'>
             <li className='mx-4 py-3 px-4 my-6 md:my-0 border-b-4 border-dark-nav hover:border-purple-g duration-75 hover:text-white'>
-              <a href='#'>Inicio</a>
+              <a
+                href='#'
+                onClick={() => {
+                  setI(1);
+                }}
+              >
+                Inicio
+              </a>
             </li>
             <li className='mx-4 py-3 px-4 my-6 md:my-0 border-b-4 border-dark-nav hover:border-purple-g duration-75 hover:text-white'>
-              <a href='#'>Categorias</a>
+              <a
+                href='#'
+                onClick={() => {
+                  setI(2);
+                }}
+              >
+                Cursos
+              </a>
             </li>
             <li className='mx-4 py-3 px-4 my-6 md:my-0 border-b-4 border-dark-nav hover:border-purple-g duration-75 hover:text-white'>
               <a href='#'>Redes</a>

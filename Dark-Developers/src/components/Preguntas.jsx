@@ -45,7 +45,7 @@ export function Preguntas() {
   }
 
   return (
-    <div className='bg-dark-nav w-full py-14'>
+    <div id='preguntas' className='bg-dark-nav w-full py-14'>
       <h2 className='text-2xl sm:text-3xl font-bold text-center mb-8 text-slate-200'>Preguntas Frecuentes</h2>
       <div className='container w-[85%] mx-auto border-2 border-purple-g p-6 rounded-lg text-lg sm:text-2xl md:text-3xl text-slate-400  duration-300'>
         <ul>

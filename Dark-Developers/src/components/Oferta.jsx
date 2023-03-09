@@ -18,7 +18,7 @@ export function Oferta() {
   }
 
   return (
-    <div className='bg-blue-dark py-14 flex items-center justify-center'>
+    <div id='oferta' className='bg-blue-dark py-14 flex items-center justify-center'>
       <div className='w-[85%] overflow-hidden p-8 rounded-xl bg-gradient-to-t from-dark-nav to-purple-900'>
         <div id='slider' className='w-[200%] duration-700 flex justify-evenly'>
           {/* item-1 */}

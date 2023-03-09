@@ -1,21 +1,43 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Inicio } from './pages/Inicio';
-import { Cursos } from './pages/Cursos';
 import { Footer } from './components/Footer';
+import { Banner } from './components/Banner';
+import { Cards } from './components/Cards';
+import { Oferta } from './components/Oferta';
+import { Preguntas } from './components/Preguntas';
+import { Redes } from './components/Redes';
+import { Contacto } from './components/contacto';
+import { Cursos } from './pages/Cursos';
+import { useContext } from 'react';
+import { dataContext } from './context/context';
 
 const App = () => {
-  return (
-    <div className='App'>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Inicio />} />
-        <Route path='/Cursos' element={<Cursos />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+  const { index } = useContext(dataContext);
+
+  if (index == 1) {
+    return (
+      <div className='App'>
+        <Navbar />
+        <Banner />
+        <Cards />
+        <Oferta id='oferta' />
+        <Preguntas />
+        <Redes />
+        <Contacto />
+        <Footer />
+      </div>
+    );
+  }
+
+  if (index == 2) {
+    return (
+      <div className='App'>
+        <Navbar />
+        <Cursos />
+        <Footer />
+      </div>
+    );
+  }
 };
 
 export default App;

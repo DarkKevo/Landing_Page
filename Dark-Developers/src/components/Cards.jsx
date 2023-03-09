@@ -2,7 +2,7 @@ import { Card } from './Card';
 
 export function Cards() {
   return (
-    <div>
+    <div id='cards'>
       <Card />
     </div>
   );
