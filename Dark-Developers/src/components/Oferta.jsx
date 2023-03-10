@@ -2,9 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faX } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import Typewriter from 'typewriter-effect';
+import Swal from 'sweetalert2';
 
 export function Oferta() {
   const [b, sb] = useState(false);
+  const [nombre, setNombre] = useState('');
+  const [correo, setCorreo] = useState('');
+  const [password, setPassword] = useState('');
 
   function ButtonHandler() {
     let i = document.querySelector('#slider');
@@ -15,6 +19,35 @@ export function Oferta() {
       i.classList.remove('ml-[-106%]');
       sb(false);
     }
+  }
+
+  function Handler(e) {
+    e.preventDefault();
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify({
+        nombre: nombre,
+        correo: correo,
+        password: password,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then((response) => {
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Te has registrado Exitosamente',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        console.log(response);
+      })
+      .catch((error) => console.log(error));
+    setCorreo('');
+    setNombre('');
+    setPassword('');
   }
 
   return (
@@ -77,28 +110,38 @@ export function Oferta() {
               </div>
             </div>
             <div className='w-[100%] md:w-[50%] flex justify-center'>
-              <div class='w-[90%]'>
-                <form class='bg-dark-nav shadow-md rounded px-3 pt-2 pb-3 md:px-8 md:pt-6 md:pb-8 mb-4'>
+              <div class='w-[150%] sm:w-[95%]'>
+                <form onSubmit={Handler} class='bg-dark-nav shadow-md rounded px-3 pt-2 pb-3 md:px-8 md:pt-6 md:pb-8 mb-4'>
                   <div class='mb-3'>
                     <div class='mb-4'>
                       <label class='block text-slate-200 text-xs md:text-sm font-bold mb-2' for='password'>
                         Nombre Completo
                       </label>
                       <input
+                        required
                         class='shadow appearance-none border rounded w-full py-1 px-1 md:py-2 md:px-3 text-black leading-tight focus:outline-none focus:shadow-outline'
                         id='username'
                         type='text'
+                        value={nombre}
                         placeholder='Nombre'
+                        onChange={(e) => {
+                          setNombre(e.target.value);
+                        }}
                       />
                     </div>
                     <label class='block text-slate-200 text-xs md:text-sm font-bold mb-2' for='usuario'>
                       Correo Electronico
                     </label>
                     <input
+                      required
                       class='shadow appearance-none border rounded w-full py-1 px-1 md:py-2 md:px-3 text-black leading-tight focus:outline-none focus:shadow-outline'
                       id='username'
                       type='text'
                       placeholder='Username'
+                      value={correo}
+                      onChange={(e) => {
+                        setCorreo(e.target.value);
+                      }}
                     />
                   </div>
                   <div class='mb-5'>
@@ -106,16 +149,21 @@ export function Oferta() {
                       Contraseña
                     </label>
                     <input
+                      required
                       class='shadow appearance-none border rounded w-full py-1 px-1 md:py-2 md:px-3 text-black leading-tight focus:outline-none focus:shadow-outline'
                       id='username'
                       type='text'
                       placeholder='password'
+                      value={password}
+                      onChange={(e) => {
+                        setPassword(e.target.value);
+                      }}
                     />
                   </div>
                   <div class='flex items-center justify-between'>
                     <button
                       class='bg-blue-500 text-xs sm:text-base hover:bg-blue-700 text-white font-bold py-1 px-2 md:py-2 md:px-4 rounded focus:outline-none focus:shadow-outline'
-                      type='button'
+                      type='submit'
                     >
                       Registrarse
                     </button>

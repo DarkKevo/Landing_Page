@@ -38,6 +38,14 @@ const App = () => {
       </div>
     );
   }
+
+  if (index != 1 && index != 2) {
+    return (
+      <div className='App text-center text-slate-200 font-bold flex justify-center items-center w-full h-[100vh] bg-dark-nav'>
+        <h1 className='text-2xl sm:text-5xl'>Error: Page not Found</h1>
+      </div>
+    );
+  }
 };
 
 export default App;
