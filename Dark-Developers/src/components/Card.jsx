@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { data } from '../data/data';
+import { dataContext } from '../context/context';
 
 export function Card() {
+  const { setI, setM } = useContext(dataContext);
   return (
-    <div className='w-full flex items-center justify-center bg-blue-dark'>
+    <div className='w-full flex flex-col items-center justify-center bg-blue-dark'>
       <div className='grid grid-cols-1 gap-8 w-full p-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'>
         {data.map((i, index) => (
           <div
@@ -22,6 +25,15 @@ export function Card() {
           </div>
         ))}
       </div>
+      <button
+        onClick={() => {
+          setI(2);
+          setM(2);
+        }}
+        className='w-[95%] py-3 mb-5 text-xl sm:text-2xl text-slate-500 hover:text-slate-200 rounded-lg hover:bg-purple-900 duration-500 bg-dark-nav-500'
+      >
+        Ver mas Cursos
+      </button>
     </div>
   );
 }

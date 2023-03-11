@@ -1,14 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
 import { useContext } from 'react';
 import { dataContext } from '../context/context';
 import { Link } from 'react-scroll';
 
 export function Navbar() {
-  const { setI } = useContext(dataContext);
-  const [menu, set] = useState(false);
-  const [menu2, setM] = useState(1);
+  const { setI, menu2, setM, menu, set } = useContext(dataContext);
 
   function Menu(e) {
     if (menu === false) {
