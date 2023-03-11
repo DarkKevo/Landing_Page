@@ -36,7 +36,7 @@ export function Navbar() {
                     setI(1);
                   }}
                   className='h-9 inline'
-                  src='src/assets/dark.png'
+                  src='src/assets/logo.png'
                 />
               </span>
               <span className='text-slate-500 hover:text-white duration-75 md:hidden text-2xl mx-2 cursor-pointer block'>
@@ -89,7 +89,7 @@ export function Navbar() {
           <nav className='px-6 fixed w-full z-[99] py-3 bg-dark-nav border-b-4 border-purple-g md:flex md:items-center md:justify-between'>
             <div className='flex justify-between items-center'>
               <span className='cursor-pointer'>
-                <img className='h-9 inline' src='src/assets/dark.png' />
+                <img className='h-9 inline' src='src/assets/logo.png' />
               </span>
               <span className='text-slate-500 hover:text-white duration-75 md:hidden text-2xl mx-2 cursor-pointer block'>
                 <FontAwesomeIcon onClick={Menu} icon={faX} />
@@ -148,7 +148,7 @@ export function Navbar() {
                     setI(1);
                   }}
                   className='h-9 inline'
-                  src='src/assets/dark.png'
+                  src='src/assets/logo.png'
                 />
               </span>
               <span className='text-slate-500 hover:text-white duration-75 md:hidden text-2xl mx-2 cursor-pointer block'>
