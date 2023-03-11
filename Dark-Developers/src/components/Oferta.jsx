@@ -152,7 +152,7 @@ export function Oferta() {
                       required
                       className='shadow appearance-none border rounded w-full py-1 px-1 md:py-2 md:px-3 text-black leading-tight focus:outline-none focus:shadow-outline'
                       id='username'
-                      type='text'
+                      type='password'
                       placeholder='password'
                       value={password}
                       onChange={(e) => {
